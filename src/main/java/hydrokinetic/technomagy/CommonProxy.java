@@ -19,6 +19,7 @@ package hydrokinetic.technomagy;
 import java.io.File;
 import net.minecraft.item.Item;
 import net.minecraft.block.Block;
+import net.minecraft.item.ItemBlock;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -49,10 +50,12 @@ public class CommonProxy {
     }
     
     @SubscribeEvent
-    public static void registerBlocks(RegistryEvent.Register<Block> event) {     
+    public static void registerBlocks(RegistryEvent.Register<Block> event) {  
+        event.getRegistry().register(new BlockFirst());
     }
     
     @SubscribeEvent
-    public static void registerItems(RegistryEvent.Register<Item> event) {        
+    public static void registerItems(RegistryEvent.Register<Item> event) { 
+        event.getRegistry().register(new ItemBlock(ModBlocks.firstBlock).setRegistryName(ModBlocks.firstBlock.getRegistryName()));
     }
 }
