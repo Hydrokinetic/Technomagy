@@ -16,10 +16,13 @@
 
 package hydrokinetic.technomagy;
 
-import net.minecraft.init.Blocks;
+
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import org.apache.logging.log4j.Logger;
 
 @Mod(modid = Technomagy.MODID, name = Technomagy.MODNAME, version = Technomagy.MODVERSION, dependencies = "required-after:Forge@[14.23.0.2512,)", useMetadata = true)
 public class Technomagy {
@@ -28,4 +31,27 @@ public class Technomagy {
     public static final String MODNAME = "Technomagy";
     public static final String MODVERSION = "0.0.1";
 
+    @SidedProxy(clientSide = "hydrokinetic.technomagy.proxy.ClientProxy", serverSide = "hydrokinetic.technomagy.proxy.ServerProxy")
+    public static CommonProxy proxy;
+    
+    public static Logger logger;
+    
+    @Mod.Instance
+    public static Technomagy instance;
+    
+    @Mod.EventHandler
+    public void PreInit(FMLPreInitializationEvent event) {
+        logger = event.getModLog();
+        proxy.preInit(event);
+    }
+    
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent e) {
+        proxy.init(e);
+    }
+    
+    @Mod.EventHandler
+    public void postInit(FMLPostInitializationEvent e) {
+        proxy.postInit(e);
+    }
 }
