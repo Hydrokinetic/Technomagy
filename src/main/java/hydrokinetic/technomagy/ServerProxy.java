@@ -1,5 +1,5 @@
 /*
- * This file was created by Hydrokinetic (aka Swordstone)
+ * This file was created by Swordstone (aka Hydrokinetic)
  * as part of Technomagy, a mod for Minecraft. The source code
  * can be found here:
  * https://github.com/Hydrokinetic/Technomagy
