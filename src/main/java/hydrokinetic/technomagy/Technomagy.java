@@ -17,6 +17,7 @@
 package hydrokinetic.technomagy;
 
 
+import hydrokinetic.technomagy.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -24,7 +25,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = Technomagy.MODID, name = Technomagy.MODNAME, version = Technomagy.MODVERSION, dependencies = "required-after:Forge@[11.16.0.1865,)", useMetadata = true)
+@Mod(modid = Technomagy.MODID, name = Technomagy.MODNAME, version = Technomagy.MODVERSION, dependencies = "after:forge@[11.16.0.1865,)", useMetadata = true)
 public class Technomagy {
     
     public static final String MODID = "technomagy";

@@ -22,7 +22,7 @@ import net.minecraft.block.material.Material;
 public class BlockFirst extends Block {
     public BlockFirst() {
         super(Material.ROCK);
-        setUnlocalizedName(Technomagy.MODID + ".firstBlock");    // Used for localization
-        setRegistryName("firstBlock");
+        setUnlocalizedName(Technomagy.MODID + ".firstblock");    // Used for localization
+        setRegistryName("firstblock");
     }
 }

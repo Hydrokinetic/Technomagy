@@ -16,6 +16,7 @@
 
 package hydrokinetic.technomagy;
 
+import hydrokinetic.technomagy.proxy.CommonProxy;
 import net.minecraftforge.common.config.Configuration;
 import org.apache.logging.log4j.Level;
 

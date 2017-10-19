@@ -14,8 +14,11 @@
  * File creation date: Oct 19, 2017, 12:16:04 PM EST
  */
 
-package hydrokinetic.technomagy;
+package hydrokinetic.technomagy.proxy;
 
+import hydrokinetic.technomagy.BlockFirst;
+import hydrokinetic.technomagy.Config;
+import hydrokinetic.technomagy.ModBlocks;
 import java.io.File;
 import net.minecraft.item.Item;
 import net.minecraft.block.Block;

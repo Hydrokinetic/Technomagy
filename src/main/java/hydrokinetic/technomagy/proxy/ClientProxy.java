@@ -14,7 +14,7 @@
  * File creation date: Oct 19, 2017, 12:18:52 PM EST
  */
 
-package hydrokinetic.technomagy;
+package hydrokinetic.technomagy.proxy;
 
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.fml.common.Mod;

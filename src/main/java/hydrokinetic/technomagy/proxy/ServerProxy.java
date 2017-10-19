@@ -14,7 +14,7 @@
  * File creation date: Oct 19, 2017, 12:20:14 PM EST
  */
 
-package hydrokinetic.technomagy;
+package hydrokinetic.technomagy.proxy;
 
 public class ServerProxy extends CommonProxy {
 

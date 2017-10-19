@@ -19,6 +19,7 @@ package hydrokinetic.technomagy;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
-    @GameRegistry.ObjectHolder("technomagy.firstBlock")
+    
+    @GameRegistry.ObjectHolder("technomagy:firstblock")
     public static BlockFirst firstBlock;
 }
