@@ -14,12 +14,19 @@
  * File creation date: Oct 19, 2017, 9:08:38 PM EST
  */
 
-package hydrokinetic.technomagy.block.item;
+package hydrokinetic.technomagy.item;
 
+import hydrokinetic.technomagy.block.BlockCounter;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModItems {
 
-    @GameRegistry.ObjectHolder("Technomagy:firstitem")
+    @GameRegistry.ObjectHolder("technomagy:firstitem")
     public static ItemFirstItem firstItem;
+    
+    @SideOnly(Side.CLIENT)
+    public static void initModels() {
+    }
 }

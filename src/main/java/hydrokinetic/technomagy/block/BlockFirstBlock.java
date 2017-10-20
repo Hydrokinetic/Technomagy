@@ -21,6 +21,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class BlockFirstBlock extends Block {
+    
     public BlockFirstBlock() {
         super(Material.ROCK);
         setUnlocalizedName(Technomagy.MODID + ".firstblock");    // Used for localization

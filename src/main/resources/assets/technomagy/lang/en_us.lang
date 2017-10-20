@@ -1,0 +1,7 @@
+tile.technomagy.firstblock.name=First Block
+tile.technomagy.counter.name=Counter Block
+
+item.technomagy.firstitem.name=First Item
+
+message.technomagy.counter=Counter:
+message.technomagy.counter_par=Counter: %d

@@ -17,9 +17,19 @@
 package hydrokinetic.technomagy.block;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModBlocks {
     
     @GameRegistry.ObjectHolder("technomagy:firstblock")
     public static BlockFirstBlock firstBlock;
+    
+    @GameRegistry.ObjectHolder("technomagy:counter")
+    public static BlockCounter counter;
+    
+    @SideOnly(Side.CLIENT)
+    public static void initModels() {
+        counter.initModel();
+    }
 }

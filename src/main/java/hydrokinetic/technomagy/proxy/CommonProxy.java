@@ -18,8 +18,11 @@ package hydrokinetic.technomagy.proxy;
 
 import hydrokinetic.technomagy.block.BlockFirstBlock;
 import hydrokinetic.technomagy.Config;
+import hydrokinetic.technomagy.Technomagy;
+import hydrokinetic.technomagy.block.BlockCounter;
 import hydrokinetic.technomagy.block.ModBlocks;
-import hydrokinetic.technomagy.block.item.ItemFirstItem;
+import hydrokinetic.technomagy.block.tile.TileCounter;
+import hydrokinetic.technomagy.item.ItemFirstItem;
 import java.io.File;
 import net.minecraft.item.Item;
 import net.minecraft.block.Block;
@@ -31,6 +34,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 @Mod.EventBusSubscriber
@@ -56,11 +60,14 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {  
         event.getRegistry().register(new BlockFirstBlock());
+        event.getRegistry().register(new BlockCounter());
+        GameRegistry.registerTileEntity(TileCounter.class, Technomagy.MODID + "_counter");
     }
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) { 
         event.getRegistry().register(new ItemBlock(ModBlocks.firstBlock).setRegistryName(ModBlocks.firstBlock.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.counter).setRegistryName(ModBlocks.counter.getRegistryName()));
         event.getRegistry().register(new ItemFirstItem());
     }
 }

@@ -14,7 +14,7 @@
  * File creation date: Oct 19, 2017, 9:05:59 PM EST
  */
 
-package hydrokinetic.technomagy.block.item;
+package hydrokinetic.technomagy.item;
 
 import hydrokinetic.technomagy.Technomagy;
 import net.minecraft.item.Item;

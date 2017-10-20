@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "technomagy:blocks/blocktexture",
+        "down": "technomagy:blocks/blocktexture",
+        "up": "technomagy:blocks/blocktexture",
+        "east": "technomagy:blocks/blocktexture",
+        "west": "technomagy:blocks/blocktexture",
+        "north": "technomagy:blocks/countertexture",
+        "south": "technomagy:blocks/blocktexture"
+    }
+}
