@@ -11,18 +11,15 @@
  * If you're wondering what that means, a summary can be found here:
  * https://creativecommons.org/licenses/by-nc-sa/3.0/
  * 
- * File creation date: Oct 19, 2017, 12:42:14 PM EST
+ * File creation date: Oct 19, 2017, 9:08:38 PM EST
  */
 
-package hydrokinetic.technomagy;
+package hydrokinetic.technomagy.block.item;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
-public class BlockFirst extends Block {
-    public BlockFirst() {
-        super(Material.ROCK);
-        setUnlocalizedName(Technomagy.MODID + ".firstblock");    // Used for localization
-        setRegistryName("firstblock");
-    }
+public class ModItems {
+
+    @GameRegistry.ObjectHolder("Technomagy:firstitem")
+    public static ItemFirstItem firstItem;
 }

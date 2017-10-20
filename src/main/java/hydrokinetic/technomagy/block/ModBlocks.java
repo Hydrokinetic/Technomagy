@@ -14,12 +14,12 @@
  * File creation date: Oct 19, 2017, 12:46:14 PM EST
  */
 
-package hydrokinetic.technomagy;
+package hydrokinetic.technomagy.block;
 
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
     
     @GameRegistry.ObjectHolder("technomagy:firstblock")
-    public static BlockFirst firstBlock;
+    public static BlockFirstBlock firstBlock;
 }
