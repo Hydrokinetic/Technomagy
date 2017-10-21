@@ -28,8 +28,13 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("technomagy:counter")
     public static BlockCounter counter;
     
+    @GameRegistry.ObjectHolder("technomagy:palette")
+    public static BlockPalette palette;
+    
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         counter.initModel();
+        palette.initModel();
+        firstBlock.initModel();
     }
 }
