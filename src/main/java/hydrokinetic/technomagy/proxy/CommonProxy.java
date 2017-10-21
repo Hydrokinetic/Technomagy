@@ -20,6 +20,7 @@ import hydrokinetic.technomagy.block.BlockFirstBlock;
 import hydrokinetic.technomagy.Config;
 import hydrokinetic.technomagy.Technomagy;
 import hydrokinetic.technomagy.block.BlockCounter;
+import hydrokinetic.technomagy.block.BlockHouse;
 import hydrokinetic.technomagy.block.BlockPalette;
 import hydrokinetic.technomagy.block.ModBlocks;
 import hydrokinetic.technomagy.block.tile.TileCounter;
@@ -63,6 +64,8 @@ public class CommonProxy {
         event.getRegistry().register(new BlockFirstBlock());
         event.getRegistry().register(new BlockCounter());
         event.getRegistry().register(new BlockPalette());
+        event.getRegistry().register(new BlockHouse());
+        
         GameRegistry.registerTileEntity(TileCounter.class, Technomagy.MODID + "_counter");
     }
     
@@ -71,6 +74,7 @@ public class CommonProxy {
         event.getRegistry().register(new ItemBlock(ModBlocks.firstBlock).setRegistryName(ModBlocks.firstBlock.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.counter).setRegistryName(ModBlocks.counter.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.palette).setRegistryName(ModBlocks.palette.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.house).setRegistryName(ModBlocks.house.getRegistryName()));
         event.getRegistry().register(new ItemFirstItem());
     }
 }
