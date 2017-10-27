@@ -6,7 +6,7 @@
 package hydrokinetic.technomagy;
 
 import hydrokinetic.technomagy.block.ModBlocks;
-import hydrokinetic.technomagy.proxy.lib.LibGeneral;
+import hydrokinetic.technomagy.lib.LibGeneral;
 import javax.annotation.Nonnull;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,11 +22,11 @@ public class TechnomagyCreativeTab extends CreativeTabs {
     public TechnomagyCreativeTab() {
             super(LibGeneral.MOD_ID);
     }
-
+    
     @Nonnull
     @Override
     public ItemStack getIconItemStack() {
-            return new ItemStack(ModBlocks.house);
+            return new ItemStack(ModBlocks.eSpaceExtractor);
     }
 
     @Override
