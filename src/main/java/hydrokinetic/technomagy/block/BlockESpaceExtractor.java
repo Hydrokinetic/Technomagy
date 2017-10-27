@@ -17,7 +17,7 @@
 package hydrokinetic.technomagy.block;
 
 import hydrokinetic.technomagy.block.tile.TileCounter;
-import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
+import hydrokinetic.technomagy.lib.LibBlockNames;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;

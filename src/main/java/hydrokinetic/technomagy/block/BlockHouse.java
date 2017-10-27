@@ -16,7 +16,7 @@
 
 package hydrokinetic.technomagy.block;
 
-import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
+import hydrokinetic.technomagy.lib.LibBlockNames;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;

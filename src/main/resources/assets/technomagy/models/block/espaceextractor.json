@@ -1,5 +1,5 @@
 {
-    "__comment": "Model generated using MrCrayfish's Model Creator (http://mrcrayfish.com/modelcreator/)",
+    "parent": "block/block",
     "textures": {
         "particle": "technomagy:blocks/espace_extractor",
         "0": "technomagy:blocks/espace_extractor"

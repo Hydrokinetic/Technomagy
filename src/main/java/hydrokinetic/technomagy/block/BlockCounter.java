@@ -17,8 +17,8 @@
 package hydrokinetic.technomagy.block;
 
 import hydrokinetic.technomagy.block.tile.TileCounter;
-import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
-import hydrokinetic.technomagy.proxy.lib.LibGeneral;
+import hydrokinetic.technomagy.lib.LibBlockNames;
+import hydrokinetic.technomagy.lib.LibGeneral;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;

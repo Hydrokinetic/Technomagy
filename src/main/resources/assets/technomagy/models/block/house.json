@@ -1,4 +1,5 @@
 {
+    "parent": "block/block",
     "textures": {
         "particle": "blocks/blocks/cauldron_inner",
         "0": "blocks/brick",
