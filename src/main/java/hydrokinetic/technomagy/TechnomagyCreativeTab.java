@@ -6,6 +6,7 @@
 package hydrokinetic.technomagy;
 
 import hydrokinetic.technomagy.block.ModBlocks;
+import hydrokinetic.technomagy.item.ModItems;
 import hydrokinetic.technomagy.lib.LibGeneral;
 import javax.annotation.Nonnull;
 import net.minecraft.block.Block;
@@ -35,19 +36,18 @@ public class TechnomagyCreativeTab extends CreativeTabs {
     }
 
     @Override
-    public boolean hasSearchBar() {
-            return true;
-    }
-
-    @Override
     public void displayAllRelevantItems(@Nonnull NonNullList<ItemStack> list) {
             this.list = list;
-
-
+            
+            addBlock(ModBlocks.counter);
+            addBlock(ModBlocks.eSpaceExtractor);
+            addBlock(ModBlocks.house);
+            
+            addItem(ModItems.firstItem);
     }
 
     private void addItem(Item item) {
-            item.getSubItems(this, list);
+            item.getSubItems(this, list);   
     }
 
     private void addBlock(Block block) {

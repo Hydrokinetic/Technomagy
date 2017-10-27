@@ -16,7 +16,7 @@
 package hydrokinetic.technomagy.block;
 
 import hydrokinetic.technomagy.TechnomagyCreativeTab;
-import hydrokinetic.technomagy.proxy.lib.LibGeneral;
+import hydrokinetic.technomagy.lib.LibGeneral;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -30,7 +30,7 @@ public abstract class BlockMod extends Block {
         super(mat);
         setUnlocalizedName(LibGeneral.MOD_ID + "." + name);
         setRegistryName(name);
-        //setCreativeTab(TechnomagyCreativeTab.INSTANCE);
+        setCreativeTab(TechnomagyCreativeTab.INSTANCE);
     }
     
     @Override
