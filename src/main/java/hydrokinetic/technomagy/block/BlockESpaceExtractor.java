@@ -17,7 +17,7 @@
 package hydrokinetic.technomagy.block;
 
 import hydrokinetic.technomagy.block.tile.TileCounter;
-import hydrokinetic.technomagy.lib.LibBlockNames;
+import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -75,7 +75,7 @@ public class BlockESpaceExtractor extends BlockMod implements ITileEntityProvide
     public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
             EnumFacing side, float hitX, float hitY, float hitZ) {
         
-        // Return true even if clientside to ensure the game knows the block activation was handled
+        // Return true even if clientside to ensure the game knows the block activation was handles
         // and will not place a block on the client.
         return true;
     }

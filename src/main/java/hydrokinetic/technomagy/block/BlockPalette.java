@@ -11,45 +11,27 @@
  * If you're wondering what that means, a summary can be found here:
  * https://creativecommons.org/licenses/by-nc-sa/3.0/
  * 
- * File creation date: Oct 19, 2017, 12:42:14 PM EST
+ * File creation date: Oct 20, 2017, 2:54:57 PM EST
  */
 
 package hydrokinetic.technomagy.block;
 
-import hydrokinetic.technomagy.block.tile.TileWorkbench;
 import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
-import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.world.IBlockAccess;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockWorkbench extends BlockMod implements ITileEntityProvider {
+public class BlockPalette extends BlockMod {
     
-    public BlockWorkbench() {
-        super(Material.WOOD, LibBlockNames.WORKBENCH);
-    }
-    
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
-            EnumFacing side, float hitX, float hitY, float hitZ) {
-        if (world.isRemote) {
-            return true;
-        }
-        TileEntity te = getTE(world, pos);
-        if (!(te instanceof TileWorkbench)) {
-            return false;
-        }
-        //TODO: remove this and put actual stuff here
-        return true;
+    public BlockPalette() {
+        super(Material.WOOD, LibBlockNames.PALETTE);
     }
     
     @SideOnly(Side.CLIENT)
@@ -58,12 +40,18 @@ public class BlockWorkbench extends BlockMod implements ITileEntityProvider {
     }
     
     @Override
-    public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileWorkbench();
+    @SideOnly(Side.CLIENT)
+    public boolean shouldSideBeRendered(IBlockState blockstate, IBlockAccess worldIn, BlockPos pos, EnumFacing side) {
+        return false;
     }
     
-    private TileWorkbench getTE(World world, BlockPos pos) {
-        return (TileWorkbench) world.getTileEntity(pos);
+    @Override
+    public boolean isBlockNormalCube(IBlockState blockState) {
+        return false;
     }
     
+    @Override
+    public boolean isOpaqueCube(IBlockState blockState) {
+        return false;
+    }
 }

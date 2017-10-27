@@ -18,7 +18,7 @@ package hydrokinetic.technomagy;
 
 
 import hydrokinetic.technomagy.proxy.CommonProxy;
-import hydrokinetic.technomagy.lib.LibGeneral;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;

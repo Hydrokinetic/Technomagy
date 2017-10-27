@@ -16,7 +16,7 @@
 
 package hydrokinetic.technomagy.item;
 
-import hydrokinetic.technomagy.lib.LibGeneral;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraft.item.Item;
 
 public class ItemFirstItem extends Item {

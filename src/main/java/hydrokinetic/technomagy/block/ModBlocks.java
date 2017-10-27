@@ -25,6 +25,9 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("technomagy:counter")
     public static BlockCounter counter;
     
+    @GameRegistry.ObjectHolder("technomagy:palette")
+    public static BlockPalette palette;
+    
     @GameRegistry.ObjectHolder("technomagy:house")
     public static BlockHouse house;
     
@@ -34,6 +37,7 @@ public class ModBlocks {
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         counter.initModel();
+        palette.initModel();
         house.initModel();
         eSpaceExtractor.initModel();
     }

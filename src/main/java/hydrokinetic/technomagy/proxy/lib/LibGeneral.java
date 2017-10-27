@@ -11,17 +11,16 @@
  * If you're wondering what that means, a summary can be found here:
  * https://creativecommons.org/licenses/by-nc-sa/3.0/
  * 
- * File creation date: Oct 19, 2017, 12:03:44 PM EST
+ * File creation date: Oct 20, 2017, 9:28:55 AM EST
  */
-package hydrokinetic.technomagy.lib;
 
-public class LibBlockNames {
+package hydrokinetic.technomagy.proxy.lib;
+
+public class LibGeneral {
     
-    public static final String COUNTER = "counter";
-    public static final String ESPACE_EXTRACTOR = "espaceextractor";
-    public static final String HOUSE = "house";
-    public static final String PALETTE = "palette";
-    public static final String WORKBENCH = "workbench";
-    
+    public static final String MOD_ID = "technomagy";
+    public static final String MOD_NAME = "Technomagy";
+    public static final String MOD_VERSION = "0.0.1";
+    public static final String DEPENDENCIES = "after:forge@[11.16.0.1865,)";
     
 }

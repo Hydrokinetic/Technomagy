@@ -6,7 +6,5 @@ tile.technomagy.espaceextractor.name=E-Space Extractor (Tier 1)
 
 item.technomagy.firstitem.name=First Item
 
-itemGroup.technomagy=Technomagy Items
-
 message.technomagy.counter=Counter:
 message.technomagy.counter_par=Counter: %d

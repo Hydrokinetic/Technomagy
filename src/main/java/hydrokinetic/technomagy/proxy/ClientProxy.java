@@ -18,7 +18,7 @@ package hydrokinetic.technomagy.proxy;
 
 import hydrokinetic.technomagy.block.ModBlocks;
 import hydrokinetic.technomagy.item.ModItems;
-import hydrokinetic.technomagy.lib.LibGeneral;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.Mod;

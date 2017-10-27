@@ -20,10 +20,11 @@ import hydrokinetic.technomagy.Config;
 import hydrokinetic.technomagy.block.BlockCounter;
 import hydrokinetic.technomagy.block.BlockESpaceExtractor;
 import hydrokinetic.technomagy.block.BlockHouse;
+import hydrokinetic.technomagy.block.BlockPalette;
 import hydrokinetic.technomagy.block.ModBlocks;
 import hydrokinetic.technomagy.block.tile.TileCounter;
 import hydrokinetic.technomagy.item.ItemFirstItem;
-import hydrokinetic.technomagy.lib.LibGeneral;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import java.io.File;
 import net.minecraft.item.Item;
 import net.minecraft.block.Block;
@@ -61,6 +62,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerBlocks(RegistryEvent.Register<Block> event) {  
         event.getRegistry().register(new BlockCounter());
+        event.getRegistry().register(new BlockPalette());
         event.getRegistry().register(new BlockHouse());
         event.getRegistry().register(new BlockESpaceExtractor());
         
@@ -70,6 +72,7 @@ public class CommonProxy {
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(ModBlocks.counter).setRegistryName(ModBlocks.counter.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.palette).setRegistryName(ModBlocks.palette.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.house).setRegistryName(ModBlocks.house.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.eSpaceExtractor).setRegistryName(ModBlocks.eSpaceExtractor.getRegistryName()));
         event.getRegistry().register(new ItemFirstItem());
