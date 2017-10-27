@@ -16,8 +16,9 @@
 
 package hydrokinetic.technomagy.block;
 
-import hydrokinetic.technomagy.Technomagy;
 import hydrokinetic.technomagy.block.tile.TileCounter;
+import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraft.block.Block;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -40,14 +41,12 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockCounter extends Block implements ITileEntityProvider {
+public class BlockCounter extends BlockMod implements ITileEntityProvider {
     
     public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
     
     public BlockCounter() {
-        super(Material.IRON);
-        setUnlocalizedName(Technomagy.MODID + ".counter");
-        setRegistryName("counter");
+        super(Material.IRON, LibBlockNames.COUNTER);
     }
     
     @SideOnly(Side.CLIENT)

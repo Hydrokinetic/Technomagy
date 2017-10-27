@@ -11,14 +11,15 @@
  * If you're wondering what that means, a summary can be found here:
  * https://creativecommons.org/licenses/by-nc-sa/3.0/
  * 
- * File creation date: Oct 19, 2017, 12:42:14 PM EST
+ * File creation date: Oct 26, 2017, 9:17:09 PM EST
  */
 
 package hydrokinetic.technomagy.block;
 
-import hydrokinetic.technomagy.block.tile.TileWorkbench;
+import hydrokinetic.technomagy.block.tile.TileCounter;
 import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
 import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -33,23 +34,12 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockWorkbench extends BlockMod implements ITileEntityProvider {
+public class BlockESpaceExtractor extends BlockMod implements ITileEntityProvider {
     
-    public BlockWorkbench() {
-        super(Material.WOOD, LibBlockNames.WORKBENCH);
-    }
-    
-    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
-            EnumFacing side, float hitX, float hitY, float hitZ) {
-        if (world.isRemote) {
-            return true;
-        }
-        TileEntity te = getTE(world, pos);
-        if (!(te instanceof TileWorkbench)) {
-            return false;
-        }
-        //TODO: remove this and put actual stuff here
-        return true;
+    public BlockESpaceExtractor() {
+        super(Material.IRON, LibBlockNames.ESPACE_EXTRACTOR);
+        setHardness(5.0F);
+        setSoundType(SoundType.METAL);
     }
     
     @SideOnly(Side.CLIENT)
@@ -59,11 +49,35 @@ public class BlockWorkbench extends BlockMod implements ITileEntityProvider {
     
     @Override
     public TileEntity createNewTileEntity(World worldIn, int meta) {
-        return new TileWorkbench();
+        return new TileCounter();
     }
     
-    private TileWorkbench getTE(World world, BlockPos pos) {
-        return (TileWorkbench) world.getTileEntity(pos);
+    private TileCounter getTE(World world, BlockPos pos) {
+        return (TileCounter) world.getTileEntity(pos);
+    }
+    
+    @Override
+    public boolean isFullBlock(IBlockState state) {
+        return false;
+    }
+    
+    @Override
+    public boolean isOpaqueCube(IBlockState state) {
+        return false;
+    }
+    
+    @Override
+    public boolean isTranslucent(IBlockState state) {
+        return true;
+    }
+    
+    @Override
+    public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer player, EnumHand hand,
+            EnumFacing side, float hitX, float hitY, float hitZ) {
+        
+        // Return true even if clientside to ensure the game knows the block activation was handles
+        // and will not place a block on the client.
+        return true;
     }
     
 }

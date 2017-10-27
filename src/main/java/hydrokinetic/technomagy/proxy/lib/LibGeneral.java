@@ -18,4 +18,9 @@ package hydrokinetic.technomagy.proxy.lib;
 
 public class LibGeneral {
     
+    public static final String MOD_ID = "technomagy";
+    public static final String MOD_NAME = "Technomagy";
+    public static final String MOD_VERSION = "0.0.1";
+    public static final String DEPENDENCIES = "after:forge@[11.16.0.1865,)";
+    
 }

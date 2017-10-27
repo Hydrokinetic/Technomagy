@@ -22,9 +22,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModBlocks {
     
-    @GameRegistry.ObjectHolder("technomagy:firstblock")
-    public static BlockFirstBlock firstBlock;
-    
     @GameRegistry.ObjectHolder("technomagy:counter")
     public static BlockCounter counter;
     
@@ -34,11 +31,14 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("technomagy:house")
     public static BlockHouse house;
     
+    @GameRegistry.ObjectHolder("technomagy:espaceextractor")
+    public static BlockESpaceExtractor eSpaceExtractor;
+    
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         counter.initModel();
         palette.initModel();
-        firstBlock.initModel();
         house.initModel();
+        eSpaceExtractor.initModel();
     }
 }

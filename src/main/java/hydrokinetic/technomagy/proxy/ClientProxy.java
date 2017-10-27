@@ -16,9 +16,9 @@
 
 package hydrokinetic.technomagy.proxy;
 
-import static hydrokinetic.technomagy.Technomagy.MODID;
 import hydrokinetic.technomagy.block.ModBlocks;
 import hydrokinetic.technomagy.item.ModItems;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.obj.OBJLoader;
 import net.minecraftforge.fml.common.Mod;
@@ -32,7 +32,7 @@ public class ClientProxy extends CommonProxy{
     public void preInit(FMLPreInitializationEvent e) {
         super.preInit(e);
         
-        OBJLoader.INSTANCE.addDomain(MODID);
+        OBJLoader.INSTANCE.addDomain(LibGeneral.MOD_ID);
     }
     
     @SubscribeEvent

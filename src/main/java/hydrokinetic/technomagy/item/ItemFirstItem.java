@@ -16,14 +16,14 @@
 
 package hydrokinetic.technomagy.item;
 
-import hydrokinetic.technomagy.Technomagy;
+import hydrokinetic.technomagy.proxy.lib.LibGeneral;
 import net.minecraft.item.Item;
 
 public class ItemFirstItem extends Item {
     
     public ItemFirstItem() {
         setRegistryName("firstitem");
-        setUnlocalizedName(Technomagy.MODID + ".firstitem");
+        setUnlocalizedName(LibGeneral.MOD_ID + ".firstitem");
     }
 
 }

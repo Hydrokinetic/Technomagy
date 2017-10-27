@@ -16,8 +16,7 @@
 
 package hydrokinetic.technomagy.block;
 
-import hydrokinetic.technomagy.Technomagy;
-import net.minecraft.block.Block;
+import hydrokinetic.technomagy.proxy.lib.LibBlockNames;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -29,12 +28,10 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockPalette extends Block{
+public class BlockPalette extends BlockMod {
     
     public BlockPalette() {
-        super(Material.WOOD);
-        setUnlocalizedName(Technomagy.MODID + ".palette");
-        setRegistryName("palette");
+        super(Material.WOOD, LibBlockNames.PALETTE);
     }
     
     @SideOnly(Side.CLIENT)

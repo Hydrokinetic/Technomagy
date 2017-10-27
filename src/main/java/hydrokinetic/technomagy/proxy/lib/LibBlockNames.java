@@ -11,21 +11,17 @@
  * If you're wondering what that means, a summary can be found here:
  * https://creativecommons.org/licenses/by-nc-sa/3.0/
  * 
- * File creation date: Oct 19, 2017, 9:08:38 PM EST
+ * File creation date: Oct 19, 2017, 12:03:44 PM EST
  */
+package hydrokinetic.technomagy.proxy.lib;
 
-package hydrokinetic.technomagy.item;
-
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
-
-public class ModItems {
-
-    @GameRegistry.ObjectHolder("technomagy:firstitem")
-    public static ItemFirstItem firstItem;
+public class LibBlockNames {
     
-    @SideOnly(Side.CLIENT)
-    public static void initModels() {
-    }
+    public static final String COUNTER = "counter";
+    public static final String ESPACE_EXTRACTOR = "espaceextractor";
+    public static final String HOUSE = "house";
+    public static final String PALETTE = "palette";
+    public static final String WORKBENCH = "workbench";
+    
+    
 }
