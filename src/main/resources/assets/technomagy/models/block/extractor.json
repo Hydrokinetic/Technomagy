@@ -1,8 +1,8 @@
 {
     "parent": "block/block",
     "textures": {
-        "particle": "technomagy:blocks/espace_extractor",
-        "0": "technomagy:blocks/espace_extractor"
+        "particle": "technomagy:blocks/extractor",
+        "0": "technomagy:blocks/extractor"
     },
     "elements": [
         {

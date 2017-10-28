@@ -18,10 +18,11 @@ package hydrokinetic.technomagy.proxy;
 
 import hydrokinetic.technomagy.Config;
 import hydrokinetic.technomagy.block.BlockCounter;
-import hydrokinetic.technomagy.block.BlockESpaceExtractor;
+import hydrokinetic.technomagy.block.BlockExtractor;
 import hydrokinetic.technomagy.block.BlockHouse;
 import hydrokinetic.technomagy.block.ModBlocks;
 import hydrokinetic.technomagy.block.tile.TileCounter;
+import hydrokinetic.technomagy.block.tile.TileExtractor;
 import hydrokinetic.technomagy.item.ItemFirstItem;
 import hydrokinetic.technomagy.lib.LibGeneral;
 import java.io.File;
@@ -62,16 +63,17 @@ public class CommonProxy {
     public static void registerBlocks(RegistryEvent.Register<Block> event) {  
         event.getRegistry().register(new BlockCounter());
         event.getRegistry().register(new BlockHouse());
-        event.getRegistry().register(new BlockESpaceExtractor());
+        event.getRegistry().register(new BlockExtractor());
         
         GameRegistry.registerTileEntity(TileCounter.class, LibGeneral.MOD_ID + "_counter");
+        GameRegistry.registerTileEntity(TileExtractor.class, LibGeneral.MOD_ID + "_extractor");
     }
     
     @SubscribeEvent
     public static void registerItems(RegistryEvent.Register<Item> event) {
         event.getRegistry().register(new ItemBlock(ModBlocks.counter).setRegistryName(ModBlocks.counter.getRegistryName()));
         event.getRegistry().register(new ItemBlock(ModBlocks.house).setRegistryName(ModBlocks.house.getRegistryName()));
-        event.getRegistry().register(new ItemBlock(ModBlocks.eSpaceExtractor).setRegistryName(ModBlocks.eSpaceExtractor.getRegistryName()));
+        event.getRegistry().register(new ItemBlock(ModBlocks.extractor).setRegistryName(ModBlocks.extractor.getRegistryName()));
         event.getRegistry().register(new ItemFirstItem());
     }
 }

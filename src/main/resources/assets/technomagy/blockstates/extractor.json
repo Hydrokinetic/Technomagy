@@ -1,0 +1,15 @@
+{
+    "forge_marker" : 1,
+    "defaults": {
+        "model": "technomagy:extractor"
+    },
+    "variants": {
+        "variant=threedim": { "model": "technomagy:extractor" },
+        "variant=fourdim": { "model": "technomagy:extractor_fourdim" },
+        "variant=fivedim": { "model": "technomagy:extractor_fivedim"},
+        "variant=sixdim": { "model": "technomagy:extractor_sixdim" },
+        "variant=sevendim": { "model": "technomagy:extractor_sevendim" },
+        "inventory": [{}],       
+        "default": [{}]
+    }
+}

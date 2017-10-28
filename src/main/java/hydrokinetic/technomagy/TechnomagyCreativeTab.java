@@ -27,7 +27,7 @@ public class TechnomagyCreativeTab extends CreativeTabs {
     @Nonnull
     @Override
     public ItemStack getIconItemStack() {
-            return new ItemStack(ModBlocks.eSpaceExtractor);
+            return new ItemStack(ModBlocks.extractor);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class TechnomagyCreativeTab extends CreativeTabs {
             this.list = list;
 
             addBlock(ModBlocks.counter);
-            addBlock(ModBlocks.eSpaceExtractor);
+            addBlock(ModBlocks.extractor);
             addBlock(ModBlocks.house);
             
             addItem(ModItems.firstItem);

@@ -2,7 +2,7 @@ tile.technomagy.firstblock.name=First Block
 tile.technomagy.counter.name=Counter Block
 tile.technomagy.palette.name=Pink Palette
 tile.technomagy.house.name=Tiny House
-tile.technomagy.espaceextractor.name=E-Space Extractor (Tier 1)
+tile.technomagy.extractor.name=E-Space Extractor
 
 item.technomagy.firstitem.name=First Item
 

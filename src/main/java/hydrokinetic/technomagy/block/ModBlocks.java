@@ -28,13 +28,13 @@ public class ModBlocks {
     @GameRegistry.ObjectHolder("technomagy:house")
     public static BlockHouse house;
     
-    @GameRegistry.ObjectHolder("technomagy:espaceextractor")
-    public static BlockESpaceExtractor eSpaceExtractor;
+    @GameRegistry.ObjectHolder("technomagy:extractor")
+    public static BlockExtractor extractor;
     
     @SideOnly(Side.CLIENT)
     public static void initModels() {
         counter.initModel();
         house.initModel();
-        eSpaceExtractor.initModel();
+        extractor.initModel();
     }
 }

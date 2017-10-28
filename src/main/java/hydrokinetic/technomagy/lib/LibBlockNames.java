@@ -18,7 +18,7 @@ package hydrokinetic.technomagy.lib;
 public class LibBlockNames {
     
     public static final String COUNTER = "counter";
-    public static final String ESPACE_EXTRACTOR = "espaceextractor";
+    public static final String ESPACE_EXTRACTOR = "extractor";
     public static final String HOUSE = "house";
     public static final String PALETTE = "palette";
     public static final String WORKBENCH = "workbench";

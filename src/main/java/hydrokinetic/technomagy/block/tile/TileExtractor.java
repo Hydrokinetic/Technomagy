@@ -19,7 +19,7 @@ package hydrokinetic.technomagy.block.tile;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
 
-public class TileESpaceExtractor extends TileEntity {
+public class TileExtractor extends TileEntity {
     
     private int counter = 0;
     
