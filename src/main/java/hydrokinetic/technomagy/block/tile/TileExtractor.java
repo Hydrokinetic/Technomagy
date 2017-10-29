@@ -18,8 +18,9 @@ package hydrokinetic.technomagy.block.tile;
 
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.ITickable;
 
-public class TileExtractor extends TileEntity {
+public class TileExtractor extends TileEntity implements ITickable {
     
     private int counter = 0;
     
@@ -27,6 +28,13 @@ public class TileExtractor extends TileEntity {
         counter--;
         markDirty(); // This tells MC that the tile entity needs to be saved next time the chunk is saved to disk.
         return counter;
+    }
+    
+    @Override
+    public void update() {
+        if (world.getTotalWorldTime() % 20 == 0) {
+            System.out.println("test");
+        }
     }
     
     public int increment() {
